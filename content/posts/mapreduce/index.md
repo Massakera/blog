@@ -1,6 +1,11 @@
-## MapReduce: A Deep Dive into the Distributed Data Processing Frameworks
++++
+title = "MapReduce: A Deep Dive into the Distributed Data Processing Frameworks"
+date = "2023-04-08"
++++
 
-MapReduce is a highly influential programming model that has transformed the way we process and analyze large-scale data sets. Introduced by Google in their 2004 paper, "MapReduce: Simplified Data Processing on Large Clusters" by Jeffrey Dean and Sanjay Ghemawat, MapReduce has since inspired numerous data processing systems, including Apache Hadoop. In this technical blog post, we'll delve deeper into the inner workings of MapReduce, its key components, and how it can be used to solve complex data processing tasks.
+MapReduce is a highly influential programming model that has transformed the way we process and analyze large-scale data sets. 
+<!--more-->
+Introduced by Google in their 2004 paper, "MapReduce: Simplified Data Processing on Large Clusters" by Jeffrey Dean and Sanjay Ghemawat, MapReduce has since inspired numerous data processing systems, including Apache Hadoop. In this technical blog post, we'll delve deeper into the inner workings of MapReduce, its key components, and how it can be used to solve complex data processing tasks.
 
 ### How Map + Reduce works
 
@@ -42,7 +47,7 @@ A MapReduce job typically follows these steps:
 
 - Output: The final output values are written to storage, often in a distributed file system.
 
-![MapReduce diagram](/mapreduce_work.jpg "MapReduce Diagram")
+![MapReduce diagram](mapreduce_work.jpg "MapReduce Diagram")
 
 ### Fault Tolerance and Scalability
 
