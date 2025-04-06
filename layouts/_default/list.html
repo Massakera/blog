@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="section-heading animate-on-scroll">
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}
+    <div class="content">
+      {{ . }}
+    </div>
+  {{ end }}
+</section>
+
+<section class="posts-section animate-on-scroll">
+  <div class="posts-list">
+    {{ range .Pages }}
+      <div class="post animate-on-scroll">
+        <a href="{{ .Permalink }}" class="post-link">
+          <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
+          <h1>{{ .Title }}</h1>
+          <div class="summary">
+            {{ .Summary }}
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

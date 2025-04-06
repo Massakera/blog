@@ -6,10 +6,19 @@ languageCode = "en-us"
 [params]
   # Cutting off the page title to two chars for mobile (console-demo -> co)
   titleCutting = true
-
-  # Set the animation style -- https://animate.style/
-  # To disable animations, please remove or comment animationStyle parameter
-  animateStyle = "animated zoomIn fast" 
+  
+  # Theme details
+  description = "Random drafts about software engineering and functional programming"
+  mainSections = ["posts"]
+  
+  # Default theme
+  defaultTheme = "dark"
+  
+  # Author information
+  author = "Massaki"
+  github = "https://github.com/Massakera"
+  twitter = "https://twitter.com/Massakito"
+  linkedin = "https://www.linkedin.com/in/enzo-massaki-a36151213/"
 
   [[params.navlinks]]
   name = "about/"

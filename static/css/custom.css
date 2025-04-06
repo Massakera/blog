@@ -1,0 +1,270 @@
+:root {
+  /* Light theme */
+  --bg-color-light: #ffffff;
+  --text-color-light: #222222;
+  --accent-color-light: #556cd6;
+  --border-color-light: #e1e1e1;
+  --code-bg-light: #f5f7ff;
+  
+  /* Dark theme */
+  --bg-color-dark: #1a1a1a;
+  --text-color-dark: #f1f1f1;
+  --accent-color-dark: #90caf9;
+  --border-color-dark: #333333;
+  --code-bg-dark: #2d2d2d;
+  
+  /* Default to dark theme */
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --border-color: var(--border-color-dark);
+  --code-bg: var(--code-bg-dark);
+  
+  /* Fonts */
+  --mono-font: 'JetBrains Mono', 'Roboto Mono', monospace;
+  --sans-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Theme support */
+[data-theme="light"] {
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+  --accent-color: var(--accent-color-light);
+  --border-color: var(--border-color-light);
+  --code-bg: var(--code-bg-light);
+}
+
+[data-theme="dark"] {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --border-color: var(--border-color-dark);
+  --code-bg: var(--code-bg-dark);
+}
+
+/* Base styles */
+body {
+  font-family: var(--mono-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent-color);
+  transition: border-bottom 0.2s ease;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+/* Header and navigation */
+.terminal-nav {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terminal-logo {
+  font-weight: bold;
+}
+
+.site-name {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.terminal-menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.terminal-menu li {
+  margin-left: 1.5rem;
+}
+
+.terminal-menu a {
+  border-bottom: none;
+  font-weight: 500;
+}
+
+.terminal-menu a:hover {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+/* Posts */
+.posts-list {
+  margin-top: 2rem;
+}
+
+.post {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+.post-link {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: none;
+  padding: 1rem;
+  margin: -1rem;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.post-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: none;
+}
+
+[data-theme="dark"] .post-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.post-link h1 {
+  color: var(--accent-color);
+  transition: color 0.2s ease;
+}
+
+.post-link:hover h1 {
+  color: var(--accent-color);
+}
+
+.date {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--mono-font);
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+}
+
+#theme-toggle:hover {
+  background-color: var(--border-color);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: var(--mono-font);
+  background-color: var(--code-bg);
+  border-radius: 3px;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .terminal-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .terminal-menu {
+    margin-top: 1rem;
+  }
+  
+  .terminal-menu ul {
+    flex-wrap: wrap;
+  }
+  
+  .terminal-menu li {
+    margin-left: 0;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+}

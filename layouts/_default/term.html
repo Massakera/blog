@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="term-section animate-on-scroll">
+  <h1>{{ .Title }}</h1>
+  
+  <div class="posts-list">
+    {{ range .Pages }}
+      <div class="post animate-on-scroll">
+        <div class="date">{{ .Date.Format "Jan. 2, 2006" }}</div>
+        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <div class="summary">
+          {{ .Summary }}
+        </div>
+        <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
