@@ -1,5 +1,6 @@
 +++ 
 title = "About" 
+type = "about"
 +++
 
 I’m Enzo Massaki, a self-proclaimed code masochist. Welcome to "Massaki’s Dump"—a messy pile of drafts, rants, and half-baked thoughts on software engineering, data pipelines, AI engineering, and random shit like taming a 2-month-old puppy that’s shredding my phone charger. 
