@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" data-theme="dark">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <meta name="googlebot" content="index,follow,snippet,archive">
-    <link rel="stylesheet" href="{{ "hugo-theme-console/css/terminal-0.7.4.min.css" | absURL }}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Base Theme CSS (keep for compatibility) -->
+    <link rel="stylesheet" href="{{ "hugo-theme-console/css/terminal-0.7.2.min.css" | absURL }}">
     <link rel="stylesheet" href="{{ "hugo-theme-console/css/animate-4.1.1.min.css" | absURL }}">
     <link rel="stylesheet" href="{{ "hugo-theme-console/css/console.css" | absURL }}">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "css/custom.css" | absURL }}">
+    
     {{ `
       <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -42,15 +53,21 @@
                 {{ range .Site.Params.navlinks }}
                 <li><a href="{{ absURL .url }}" typeof="ListItem">{{ .name }}</a></li>
                 {{ end }}
+                <li><button id="theme-toggle">🌙 Dark Mode</button></li>
             </ul>
           </nav>
         </div>
     </div>
 
-    <div class="container {{ .Site.Params.animateStyle }}" >
-        {{ block "main" . }}
-        {{ end }}
-        {{ partial "footer.html" . }}
+    <div class="container" >
+        <div class="content animate-on-scroll">
+            {{ block "main" . }}
+            {{ end }}
+            {{ partial "footer.html" . }}
+        </div>
     </div>
+    
+    <!-- TypeScript bundle -->
+    <script src="{{ "js/bundle.js" | absURL }}"></script>
   </body>
 </html>
