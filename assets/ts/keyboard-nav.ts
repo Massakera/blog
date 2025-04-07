@@ -427,7 +427,7 @@ export class KeyboardNavigation {
     const hint = document.createElement('div');
     hint.id = 'keyboard-hint';
     hint.className = 'keyboard-hint';
-    hint.innerHTML = `hold<span class="key-icon">&nbsp;?&nbsp;</span>for shortcuts`;
+    hint.innerHTML = `hold <span class="key-icon">&nbsp;?&nbsp;</span>for shortcuts`;
     
     // Add to the bottom right of the screen
     document.body.appendChild(hint);
