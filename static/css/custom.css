@@ -151,6 +151,7 @@ a:hover {
   margin: -1rem;
   border-radius: 5px;
   transition: background-color 0.2s ease;
+  width: 100%;
 }
 
 .post-link:hover {
@@ -171,12 +172,30 @@ a:hover {
   color: var(--accent-color);
 }
 
-.date {
+.post-meta {
+  margin-bottom: 0.75rem;
+}
+
+.post-date {
   font-size: 0.875rem;
   color: var(--text-color);
   opacity: 0.8;
-  margin-bottom: 0.75rem;
   display: block;
+}
+
+.post-tags {
+  margin-left: 0.5rem;
+}
+
+.post-tags a {
+  font-size: 0.75rem;
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+  border-bottom: none;
+}
+
+.post-social {
+  margin-left: 0.5rem;
 }
 
 /* Footer */

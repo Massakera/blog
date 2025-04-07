@@ -12,8 +12,10 @@
   <div class="posts-list">
     {{ range .Pages }}
       <div class="post animate-on-scroll">
-        <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
         <a href="{{ .Permalink }}" class="post-link">
+          <div class="post-meta">
+            <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+          </div>
           <h1>{{ .Title }}</h1>
           <div class="summary">
             {{ .Summary }}
