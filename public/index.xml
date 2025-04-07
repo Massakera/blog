@@ -1,26 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Massaki&#39;s dump</title>
-    <link>//localhost:1313/</link>
-    <description>Recent content on Massaki&#39;s dump</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>MapReduce: A Deep Dive into the Distributed Data Processing Frameworks</title>
-      <link>//localhost:1313/posts/mapreduce/</link>
-      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/mapreduce/</guid>
-      <description>&lt;p&gt;MapReduce is a highly influential programming model that has transformed the way we process and analyze large-scale data sets.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>//localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/about/</guid>
-      <description>&lt;p&gt;I’m Enzo Massaki, a self-proclaimed code masochist. Welcome to &amp;ldquo;Massaki’s Dump&amp;rdquo;—a messy pile of drafts, rants, and half-baked thoughts on software engineering, data pipelines, AI engineering, and random shit like taming a 2-month-old puppy that’s shredding my phone charger.&lt;/p&gt;&#xA;&lt;p&gt;I’ve got 4+ years screwing around with code, from Python Redis clones to an LLVM interpreter. I survived calculus, complex number theory research, and enough math at UFSM to make me question everything. Oh, and I did some blood donation volunteering because, well, why not.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Massaki's dump</title><link>/</link><description>Recent content on Massaki's dump</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>MapReduce: A Deep Dive into the Distributed Data Processing Frameworks</title><link>/posts/mapreduce/</link><pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate><guid>/posts/mapreduce/</guid><description>&lt;p>MapReduce is a highly influential programming model that has transformed the way we process and analyze large-scale data sets.&lt;/p></description></item><item><title>About</title><link>/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/about/</guid><description>&lt;p>I’m Enzo Massaki, a self-proclaimed code masochist. Welcome to &amp;ldquo;Massaki’s Dump&amp;rdquo;—a messy pile of drafts, rants, and half-baked thoughts on software engineering, data pipelines, AI engineering, and random shit like taming a 2-month-old puppy that’s shredding my phone charger.&lt;/p>
+&lt;p>I’ve got 4+ years screwing around with code, from Python Redis clones to an LLVM interpreter. I survived calculus, complex number theory research, and enough math at UFSM to make me question everything. Oh, and I did some blood donation volunteering because, well, why not.&lt;/p></description></item></channel></rss>
