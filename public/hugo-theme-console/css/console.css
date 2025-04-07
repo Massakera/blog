@@ -126,7 +126,7 @@ h6,
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 150px;
 }
 
 .content-column-content p,
@@ -194,7 +194,7 @@ figure {
 
 .footer {
     clear: both;
-    margin-top: 50px;
+    margin-top: 100px;
     padding-top: 10px;
     border-top: 1px solid var(--secondary-color);
     color: var(--global-font-color);
@@ -229,7 +229,7 @@ figure {
 
 .posts-list {
     position: relative;
-    padding-left: 0;
+    padding-left: 130px;
     top: 0;
 }
 
@@ -241,13 +241,12 @@ figure {
 }
 
 .posts-list .date {
-    display: block;
-    position: relative;
-    left: 0;
-    width: auto;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    width: 130px;
     z-index: 400;
     padding-top: 0;
-    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 850px) {
@@ -298,13 +297,14 @@ figure {
     }
 
     .posts-list .date {
-        display: block;
-        position: relative;
-        left: 0;
-        width: auto;
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        width: 150px;
         z-index: 400;
+        font-weight: bold;
         padding-top: 0;
-        margin-bottom: 10px;
+        display: none;
     }
 
     .footer {
