@@ -1,4 +1,4 @@
-baseurl = "https://massakidump.vercel.app/"
+baseurl = "/"
 title = "Massaki's dump"
 theme = "hugo-theme-console"
 languageCode = "en-us"
