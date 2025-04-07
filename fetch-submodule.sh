@@ -14,6 +14,9 @@ fi
 # Stop execution on error
 set -e
 
+# Enable verbose output for debugging
+set -x
+
 # Get submodule commit
 echo "Fetching submodule commit..."
 output=`git submodule status --recursive` # Get submodule info
@@ -21,6 +24,12 @@ echo "Submodule status: $output"
 # Extract the commit hash (first field after leading space)
 COMMIT=$(echo "$output" | awk '{print $1}' | tr -d '-')
 echo "Submodule commit: $COMMIT"
+
+# Validate commit hash
+if [ -z "$COMMIT" ]; then
+  echo "Error: Submodule commit hash is empty!"
+  exit 1
+fi
 
 # Set up an empty temporary work directory
 echo "Setting up temporary directory..."
@@ -39,15 +48,18 @@ else
   git remote add origin https://$SUBMODULE_GITHUB
 fi
 echo "Fetching commit $COMMIT..."
-git fetch --depth=1 origin $COMMIT
+git fetch --depth=1 origin $COMMIT || { echo "Error: Failed to fetch commit $COMMIT"; exit 1; }
 echo "Checking out commit $COMMIT..."
-git checkout $COMMIT
+git checkout $COMMIT || { echo "Error: Failed to checkout commit $COMMIT"; exit 1; }
 
 # Move the submodule from tmp to the submodule path
 echo "Moving submodule to $SUBMODULE_PATH..."
 cd .. # Go folder up
 rm -rf tmp/.git # Remove .git
-mv tmp/* $SUBMODULE_PATH/ # Move the submodule to the submodule path
+# Remove the existing submodule path to avoid conflicts
+rm -rf $SUBMODULE_PATH || true
+mkdir -p $SUBMODULE_PATH
+mv tmp/* $SUBMODULE_PATH/ || { echo "Error: Failed to move submodule to $SUBMODULE_PATH"; exit 1; }
 
 # Clean up
 echo "Cleaning up..."
