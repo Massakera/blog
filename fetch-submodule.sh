@@ -18,8 +18,8 @@ set -e
 echo "Fetching submodule commit..."
 output=`git submodule status --recursive` # Get submodule info
 echo "Submodule status: $output"
-no_prefix=${output#*-} # Remove the prefix (e.g., "-<hash>")
-COMMIT=${no_prefix% *} # Remove the suffix (e.g., " (heads/main)")
+# Extract the commit hash (first field after leading space)
+COMMIT=$(echo "$output" | awk '{print $1}' | tr -d '-')
 echo "Submodule commit: $COMMIT"
 
 # Set up an empty temporary work directory
