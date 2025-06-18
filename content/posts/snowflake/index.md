@@ -1,6 +1,6 @@
 +++
 title = "Behind Twitter's Snowflake: How to Generate Millions of Unique IDs Per Second"
-date = "2025-06-04"
+date = "2025-06-17"
 +++
 
 Imagine you're tasked with designing a system to generate unique IDs. The requirements seem simple at first, but as you dig deeper, you realize there's more to consider. Let's walk through the key questions you might ask:

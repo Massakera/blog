@@ -1,6 +1,6 @@
 +++
-title = “Por trás do Snowflake do Twitter: como gerar milhões de IDs exclusivos por segundo”
-date = “2025-06-04”
+title = "Por trás do Snowflake do Twitter: como gerar milhões de IDs exclusivos por segundo"
+date = "2025-06-17"
 +++
 
 Imagine que você foi encarregado de projetar um sistema para gerar IDs exclusivos. À primeira vista, os requisitos parecem simples, mas, à medida que você se aprofunda, percebe que há mais coisas a serem consideradas. Vamos examinar as principais perguntas que você pode fazer:
