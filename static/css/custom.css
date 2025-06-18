@@ -221,7 +221,7 @@ a:hover {
 }
 
 /* Theme toggle button */
-#theme-toggle {
+#theme-toggle, #language-toggle {
   background: transparent;
   border: 1px solid var(--border-color);
   color: var(--text-color);
@@ -233,8 +233,12 @@ a:hover {
   transition: background-color 0.2s ease;
 }
 
-#theme-toggle:hover {
+#theme-toggle:hover, #language-toggle:hover {
   background-color: var(--border-color);
+}
+
+#language-toggle {
+  margin-left: 0.5rem;
 }
 
 /* Code blocks */
