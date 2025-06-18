@@ -9,6 +9,7 @@ Imagine you're tasked with designing a system to generate unique IDs. The requir
 - They must be unique across your entire system
 - They should be sortable, especially by time
 - They need to be generated quickly and efficiently
+<!--more-->
 
 **What are the technical constraints?**
 - IDs must fit into 64 bits (no more, no less)
@@ -24,7 +25,7 @@ Imagine you're tasked with designing a system to generate unique IDs. The requir
 This is exactly the problem Twitter faced when designing their Snowflake ID system. Their solution? A brilliant approach that generates unique, time-ordered 64-bit IDs that can handle millions of events per second across global data centers, all without centralized coordination.
 
 At its core, Snowflake is Twitter's clever solution to the ID generation problem. Think of it as a smart way to create unique numbers that not only tell you when something was created but also where it came from. It's like having a timestamp and a location tag all rolled into one 64-bit number. The best part? It works across multiple servers without them having to talk to each other, making it perfect for systems that need to handle massive amounts of data.
-<!--more-->
+
 
 ## Anatomy of a Snowflake ID
 
