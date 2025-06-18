@@ -1,67 +1,30 @@
 baseurl = "/"
+title = "Massaki's dump"
 theme = "hugo-theme-console"
-defaultContentLanguage = "en"
+languageCode = "en-us"
 
-[languages]
-  [languages.en]
-    title = "Massaki's dump"
-    languageCode = "en-us"
-    languageName = "English"
-    weight = 1
-    
-    [languages.en.params]
-      # Cutting off the page title to two chars for mobile (console-demo -> co)
-      titleCutting = true
-      
-      # Theme details
-      description = "Random drafts about software engineering and functional programming"
-      mainSections = ["posts"]
-      
-      # Default theme
-      defaultTheme = "dark"
-      
-      # Author information
-      author = "Massaki"
-      github = "https://github.com/Massakera"
-      twitter = "https://twitter.com/Massakito"
-      linkedin = "https://www.linkedin.com/in/enzo-massaki-a36151213/"
-    
-      [[languages.en.params.navlinks]]
-      name = "about/"
-      url = "about/"
-    
-      [[languages.en.params.navlinks]]
-      name = "posts/"
-      url = "posts/"
+[params]
+  # Cutting off the page title to two chars for mobile (console-demo -> co)
+  titleCutting = true
+  
+  # Theme details
+  description = "Random drafts about software engineering and functional programming"
+  mainSections = ["posts"]
+  
+  # Default theme
+  defaultTheme = "dark"
+  
+  # Author information
+  author = "Massaki"
+  github = "https://github.com/Massakera"
+  twitter = "https://twitter.com/Massakito"
+  linkedin = "https://www.linkedin.com/in/enzo-massaki-a36151213/"
 
-  [languages.pt-br]
-    title = "Anotações do Massaki"
-    languageCode = "pt-br"
-    languageName = "Português"
-    weight = 2
-    
-    [languages.pt-br.params]
-      # Cutting off the page title to two chars for mobile (console-demo -> co)
-      titleCutting = true
-      
-      # Theme details
-      description = "Rascunhos aleatórios sobre engenharia de software e programação funcional"
-      mainSections = ["posts"]
-      
-      # Default theme
-      defaultTheme = "dark"
-      
-      # Author information
-      author = "Massaki"
-      github = "https://github.com/Massakera"
-      twitter = "https://twitter.com/Massakito"
-      linkedin = "https://www.linkedin.com/in/enzo-massaki-a36151213/"
-    
-      [[languages.pt-br.params.navlinks]]
-      name = "sobre/"
-      url = "about/"
-    
-      [[languages.pt-br.params.navlinks]]
-      name = "posts/"
-      url = "posts/"
+  [[params.navlinks]]
+  name = "about/"
+  url = "about/"
+
+  [[params.navlinks]]
+  name = "posts/"
+  url = "posts/"
   
